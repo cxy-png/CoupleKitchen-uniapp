@@ -6,7 +6,7 @@
 			</view>
 
 			<view>
-				<text class="welcome">公主/王子请点餐</text>
+				<text class="welcome">想吃什么 / 想喝什么</text>
 			</view>
 		</view>
 		<view class="notice-bar">
@@ -227,7 +227,7 @@
 				good: {}, //当前菜品
 				category: {}, //当前菜品所在分类
 				goodDetailModalVisible: false, //是否菜品详情模态框
-				noticeBarText: "瘦瘦的确实很好看 但我更希望你好好吃饭 坏心情与你无关", //滚动框
+				noticeBarText: "异地也能陪你一起吃饭", //滚动框
 				calculatedTop: false,
 				foodName: "",
 				cartList: [],
