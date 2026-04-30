@@ -65,18 +65,26 @@ export default {
     checkUpcoming() {
       const today = new Date()
       today.setHours(0, 0, 0, 0)
-      this.list.forEach(item => {
-        const target = new Date(item.date)
-        target.setHours(0, 0, 0, 0)
-        const daysLeft = Math.round((target - today) / (1000 * 60 * 60 * 24))
-        if (daysLeft >= 0 && daysLeft <= 3) {
-          uni.showToast({
-            title: `「${item.title}」还有 ${daysLeft === 0 ? '今天' : daysLeft + ' 天'}！`,
-            icon: 'none',
-            duration: 3000
-          })
-        }
-      })
+      const upcoming = this.list
+        .map(item => {
+          const target = new Date(item.date)
+          target.setHours(0, 0, 0, 0)
+          const daysLeft = Math.round((target - today) / (1000 * 60 * 60 * 24))
+          return { ...item, daysLeft }
+        })
+        .filter(item => item.daysLeft >= 0 && item.daysLeft <= 3)
+        .sort((a, b) => a.daysLeft - b.daysLeft)
+
+      if (upcoming.length > 0) {
+        const first = upcoming[0]
+        const label = first.daysLeft === 0 ? '今天' : `还有 ${first.daysLeft} 天`
+        const extra = upcoming.length > 1 ? `（共 ${upcoming.length} 个）` : ''
+        uni.showToast({
+          title: `「${first.title}」${label}！${extra}`,
+          icon: 'none',
+          duration: 3000
+        })
+      }
     },
     onDateChange(e) {
       this.newDate = e.detail.value
