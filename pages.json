@@ -9,6 +9,7 @@
 			}
 		},
 		{
+
 		"path": "pages/index/index",
 		"style": {
 			"navigationBarTitleText": "情侣厨房"
@@ -47,6 +48,46 @@
 		}
 	},
 	{
+=======
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "情侣空间"
+			}
+		},
+		{
+			"path": "pages/couple/index",
+			"style": {
+				"navigationBarTitleText": "情侣空间",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/messages/index",
+			"style": {
+				"navigationBarTitleText": "情侣消息板",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/anniversary/index",
+			"style": {
+				"navigationBarTitleText": "纪念日",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/wishlist/index",
+			"style": {
+				"navigationBarTitleText": "愿望清单",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+
 		"path": "pages/home/index",
 		"style": {
 			"navigationBarTitleText": "点菜",
@@ -127,12 +168,22 @@
 		"selectedColor": "#ff5b7f",
 		"backgroundColor": "#fff",
 		"borderStyle": "black",
+
 		"list": [{
+=======
+		"list": [
+		{
+
 			"pagePath": "pages/couple/index",
 			"text": "情侣空间",
 			"iconPath": "static/image/tabBar/caidan.png",
 			"selectedIconPath": "static/image/tabBar/caidan_selected.png"
+
 		},{
+=======
+		},
+		{
+
 			"pagePath": "pages/home/index",
 			"text": "点菜",
 			"iconPath": "static/image/tabBar/map.png",
